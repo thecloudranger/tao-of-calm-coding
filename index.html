@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tao of Calm Coding</title>
+  <style>
+    :root {
+      --bg-gradient-light: linear-gradient(to bottom right, #f0f4f8, #e0eafc);
+      --bg-gradient-dark: linear-gradient(to bottom right, #1a1a1a, #2c2c2c);
+      --primary-color-light: #333;
+      --primary-color-dark: #eee;
+      --accent-color-light: #888;
+      --accent-color-dark: #bbb;
+      --highlight-color-light: #556;
+      --highlight-color-dark: #ccc;
+    }
+
+    body[data-theme="light"] {
+      background: var(--bg-gradient-light);
+      color: var(--primary-color-light);
+    }
+
+    body[data-theme="dark"] {
+      background: var(--bg-gradient-dark);
+      color: var(--primary-color-dark);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      line-height: 1.7;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    header {
+      padding: 3rem 1rem 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+    }
+
+    ul, li {
+      margin: 0.3rem 0;
+    }
+
+    code {
+      background-color: #f4f4f4;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+
+    blockquote {
+      margin: 1.5rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid;
+      font-style: italic;
+    }
+
+    body[data-theme="light"] blockquote {
+      color: var(--highlight-color-light);
+      border-color: var(--highlight-color-light);
+    }
+
+    body[data-theme="dark"] blockquote {
+      color: var(--highlight-color-dark);
+      border-color: var(--highlight-color-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .toggle-container {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    button.toggle-theme {
+      padding: 0.5rem 1rem;
+      font-family: monospace;
+      font-size: 1rem;
+      border: none;
+      background: #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body data-theme="light">
+  <header>
+    <h1>✨ Tao of Calm Coding</h1>
+    <h3>The calm, confident path to building with AI codegen assistants</h3>
+    <div class="toggle-container">
+      <button class="toggle-theme" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+    </div>
+  </header>
+
+  <section>
+    <h2>🧠 The Calm Coding Philosophy</h2>
+    <blockquote>
+      Code not with stress, but with structure.<br>
+      Prompt not with noise, but with intent.<br>
+      Build not just fast — but with flow.
+    </blockquote>
+    <p>Whether you're using Claude, Cline, Cursor, or any other AI coding tool, this approach teaches you how to think, prompt, and flow your way through building production-grade software.</p>
+
+    <h2>🔑 The Golden Rules of Calm Coding</h2>
+    <ul>
+      <li>📂 Keep files under 500 lines. Split early, split often.</li>
+      <li>📃 Track the journey: <code>README.md</code>, <code>PLANNING.md</code>, <code>TASK.md</code>.</li>
+      <li>📊 Test often. Every function, every time.</li>
+      <li>✍️ Comment and document as you go.</li>
+      <li>🧠 Be specific in your prompts.</li>
+      <li>🌺 Refresh chats regularly for clearer results.</li>
+      <li>🔐 Never share secrets with the AI. Use environment variables.</li>
+    </ul>
+
+    <h2>🗝 Plan + Scope First</h2>
+    <ul>
+      <li><code>PLANNING.md</code>: Project architecture, tools, constraints.</li>
+      <li><code>TASK.md</code>: Tracks work, backlog, and discoveries.</li>
+    </ul>
+
+    <h2>🔧 Set Rules in Your AI IDE</h2>
+    <ul>
+      <li>Global and project-level rules keep things consistent.</li>
+      <li>Auto-update docs and tasks on every change.</li>
+      <li>Use Google-style docstrings. Write code that explains itself.</li>
+    </ul>
+
+    <h2>🔍 The First Prompt Sets the Calm</h2>
+    <p>Give examples, context, and clarity. Don’t just say "build this." Describe what it’s like, what it should do, and how it fits.</p>
+
+    <h2>⟳ Modular Prompting, One Task at a Time</h2>
+    <p>Good: <code>"Add filter_by param to list records."</code><br>
+    Bad: <code>"Add filtering, fix error, update README."</code></p>
+
+    <h2>✅ Test Everything</h2>
+    <ul>
+      <li>Use mocks. Avoid real DB/LLM calls in tests.</li>
+      <li>Success, failure, edge case for every feature.</li>
+    </ul>
+
+    <h2>🚢 Docker: When You’re Ready to Ship</h2>
+    <p>Use your AI assistant to write a <code>Dockerfile</code> and build commands. Containerize and calm-code anywhere.</p>
+
+    <h2>💡 Final Reminders</h2>
+    <ul>
+      <li>🚀 AI is your co-pilot, not your replacement.</li>
+      <li>⚖️ Structure > Chaos. Process > Panic.</li>
+      <li>🎭 You’re not here to type. You’re here to think and prompt with clarity.</li>
+    </ul>
+    <p>That’s the Tao of Calm Coding.</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Tao of Calm Coding. Coded with calm clarity.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const currentTheme = body.getAttribute('data-theme');
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      body.setAttribute('data-theme', newTheme);
+    }
+  </script>
+</body>
+</html>
