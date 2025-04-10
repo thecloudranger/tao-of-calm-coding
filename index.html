@@ -195,7 +195,7 @@
     function toggleTheme() {
       const body = document.body;
       const currentTheme = body.getAttribute('data-theme');
-      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
       body.setAttribute('data-theme', newTheme);
     }
   </script>
